@@ -1,0 +1,6 @@
+- id: WF_CREATE_RUN_HISTORY
+  given: "empty store"
+  when: "create workflow + run dummy node"
+  then:
+    - "run state == SUCCEEDED"
+    - "event log contains RUN_CREATED, STEP_SUCCEEDED"

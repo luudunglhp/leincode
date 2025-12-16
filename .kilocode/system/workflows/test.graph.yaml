@@ -1,0 +1,20 @@
+apiVersion: kilocode.ai/ksb/v1
+kind: Workflow
+metadata:
+  name: "system-builder-dummy"
+  version: "1.0.0"
+spec:
+  nodes:
+    - id: "n1"
+      type: "tool.dummy"
+      displayName: "Dummy Node"
+      ports:
+        out:
+            result: {}
+    - id: "n2"
+      type: "tool.dummy"
+      displayName: "Dummy Node 2"
+      dependsOn: ["n1"]
+  edges:
+    - from: { node: "n1", port: "result" }
+      to:   { node: "n2", port: "input" }
