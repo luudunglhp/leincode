@@ -78,5 +78,13 @@
 			"bluebird": ">=3.7.2",
 			"glob": ">=11.1.0"
 		}
+	},
+	"dependencies": {
+		"@kilocode/ksb": "workspace:^",
+		"@types/fs-extra": "^11.0.4",
+		"@types/uuid": "^11.0.0",
+		"@types/yaml": "^1.9.7",
+		"uuid": "^11.1.0",
+		"yaml": "^2.8.2"
 	}
 }
